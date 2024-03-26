@@ -14,4 +14,3 @@ If scores are equals, sort alphabetically by name.
   {name: "Big Bob", score: 134},
   {name: "Habanero Hillary", score: 98}
 ]`
-

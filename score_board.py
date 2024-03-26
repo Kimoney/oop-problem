@@ -2,11 +2,9 @@ def score_board(players):
     scores = []
     for player in players:
         score = player['chickenwings'] * 5 + player['hamburgers'] * 3 + player['hotdogs'] * 2
-        scores.append({'name': player['name'], 'score': score})
-    
-    # Sort scores by score in descending order, then by name in ascending order
+        scores.append({'name': player['name'], 'score': score})    
+# Sort scores by score in descending order, then by name in ascending order
     scores.sort(key=lambda x: (-x['score'], x['name']))
-    
     return scores
 
 # Test Case:
