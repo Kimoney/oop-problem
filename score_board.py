@@ -12,6 +12,12 @@ players = [
     {'name': "Habanero Hillary", 'chickenwings': 5, 'hamburgers': 17, 'hotdogs': 11},
     {'name': "Big Bob", 'chickenwings': 20, 'hamburgers': 4, 'hotdogs': 11}
 ]
+players2 = [
+    {'name': "Habanero Hillary", 'chickenwings': 5, 'hamburgers': 17, 'hotdogs': 11},
+    {'name': "John Doe", 'chickenwings': 5, 'hamburgers': 17, 'hotdogs': 11}
+]
 
 results = score_board(players)
+results2 = score_board(players2)
 print(results)
+print(results2)
