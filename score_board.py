@@ -1,17 +1,19 @@
-class Player:
-
-    def __init__(self, name, chicken_wings, hamburgers, hot_dogs):
-        self.name = name
-        self.score = (chicken_wings*5)+(hamburgers*3)+(hot_dogs*2)
-
-
 def score_board(players):
-    scores = list()
-
-    for player_details in players:
-        player = Player(player_details["name"], player_details["chicken_wings"], player_details["hamburgers"], player_details["hot_dogs"])
-        scores.append({"name": player.name, "score": player.score})
-
-    scores.sort(key=lambda x: (-x["score"], x["name"]))
-
+    scores = []
+    for player in players:
+        score = player['chickenwings'] * 5 + player['hamburgers'] * 3 + player['hotdogs'] * 2
+        scores.append({'name': player['name'], 'score': score})
+    
+    # Sort scores by score in descending order, then by name in ascending order
+    scores.sort(key=lambda x: (-x['score'], x['name']))
+    
     return scores
+
+# Test Case:
+players = [
+    {'name': "Habanero Hillary", 'chickenwings': 5, 'hamburgers': 17, 'hotdogs': 11},
+    {'name': "Big Bob", 'chickenwings': 20, 'hamburgers': 4, 'hotdogs': 11}
+]
+
+results = score_board(players)
+print(results)
